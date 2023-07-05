@@ -1,4 +1,11 @@
-def WPSClassFactory(iface):
-    from .example_algorithm import ExampleProcessingAlgorithm
+class Test:
+    def __init__(self):
+        pass
 
-    iface.registerProvider(ExampleProcessingAlgorithm())
+
+def WPSClassFactory(iface):
+    # from .example_algorithm import ExampleProcessingAlgorithm
+    from .example_provider import ExampleProvider
+
+    iface.registerProvider(ExampleProvider())
+    return Test()

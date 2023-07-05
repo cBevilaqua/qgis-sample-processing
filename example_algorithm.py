@@ -18,6 +18,12 @@ class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
     creates some new layers and returns some results.
     """
 
+    INPUT = "INPUT"
+    OUTPUT = "OUTPUT"
+
+    def __init__(self):
+        super().__init__()
+
     def tr(self, string):
         """
         Returns a translatable string with the self.tr() function.
